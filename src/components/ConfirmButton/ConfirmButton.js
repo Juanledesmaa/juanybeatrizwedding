@@ -13,7 +13,7 @@ const ConfirmButton = (props) => {
                     <div className="row justify-content-center">
                         <div className="col-12 text-center">
                         <div className="confirm-area">
-                            <button className="theme-btn confirm-btn">Enviar</button>
+                            <button className="theme-btn confirm-btn">Confirmar asistencia</button>
                         </div>
                         </div>
                     </div>
