@@ -22,7 +22,7 @@ const Hero3 = (props) => {
                             <TimeCountDown/>
                         </div>
 
-                        <button className="theme-btn confirm-btn">Enviar</button>
+                        <button className="theme-btn confirm-btn">Confirmar asistencia</button>
                     </div>
                 </div>
             </div>
