@@ -5,9 +5,9 @@ const SectionTitle = (props) => {
     return(
         <div className="wpo-section-title">
             <div className="section-title-icon">
-                <i className="fi flaticon-dove"></i>
+                <i className="fi flaticon-gallery"></i>
             </div>
-            <h2>{props.MainTitle}</h2>
+            <h1>{props.MainTitle}</h1>
         </div>
     )
 }

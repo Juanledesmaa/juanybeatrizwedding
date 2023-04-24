@@ -10,9 +10,8 @@ const EventPage =() => {
     return(
         <Fragment>
             <Navbar2/>
-            <PageTitle pageTitle={'When & Where'} pagesub={'Events'}/> 
+            <PageTitle pageTitle={'Cuando y Donde'} pagesub={'Events'}/> 
             <EventSection eClass={'wpo-event-section-s2'}/>
-            <PartnerSection pClass={'section-padding pt-0'}/>
             <Footer/>
             <Scrollbar/>
         </Fragment>

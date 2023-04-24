@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import SimpleReactValidator from 'simple-react-validator';
 import SectionTitle from '../SectionTitle'
 
-import rightImg from '../../images/rsvp/right.png'
+import rightImg from '../../images/agregadas/remove_background.png'
 
 import vec1 from '../../images/rsvp/flower1.png'
 import vec2 from '../../images/rsvp/flower2.png'
@@ -59,7 +59,7 @@ const RSVP2 = (props) => {
                                 <div className="wpo-contact-form-area">
                                     <div className="wpo-section-title">
                                         <div className="section-title-icon">
-                                            <i className="fi flaticon-dove"></i>
+                                            <i className="fi flaticon-wedding"></i>
                                         </div>
                                         <h2>¿Vienes a nuestra boda?</h2>
                                     </div>
@@ -131,12 +131,6 @@ const RSVP2 = (props) => {
                                             <button type="submit" className="theme-btn">Enviar</button>
                                         </div>
                                     </form >
-                                </div>
-                                <div className="vector-1">
-                                    <img src={vec1} alt="" />
-                                </div>
-                                <div className="vector-2">
-                                    <img src={vec2} alt="" />
                                 </div>
                             </div>
                         </div>
