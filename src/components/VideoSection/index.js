@@ -6,7 +6,7 @@ const VideoSection = (props) => {
     return(
         <section className="wpo-video-section">
             <h2 className="hidden">some</h2>
-            <VideoModal/>
+            {/* <VideoModal/> */}
         </section>
     )
 }

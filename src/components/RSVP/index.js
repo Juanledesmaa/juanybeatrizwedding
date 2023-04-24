@@ -42,6 +42,7 @@ const RSVP = (props) => {
                 attend: '',
                 guest: ''
             })
+            // AQUI ENGANCHAR LA FUNCION DE ENVIO DE FORMULARIO
         } else {
             validator.showMessages();
         }
@@ -122,12 +123,6 @@ const RSVP = (props) => {
                                 <button type="submit" className="theme-btn">Enviar</button>
                             </div>
                         </form >
-                    </div>
-                    <div className="vector-1">
-                        <img src={vec1} alt="" />
-                    </div>
-                    <div className="vector-2">
-                        <img src={vec2} alt="" />
                     </div>
                 </div>
             </div>

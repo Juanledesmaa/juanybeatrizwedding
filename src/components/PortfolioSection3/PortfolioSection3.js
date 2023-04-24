@@ -3,10 +3,17 @@ import SectionTitle from "../SectionTitle";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import pImg1 from '../../images/portfolio/13.jpg'
-import pImg2 from '../../images/portfolio/14.jpg'
-import pImg3 from '../../images/portfolio/15.jpg'
-import pImg4 from '../../images/portfolio/16.jpg'
+// import pImg1 from '../../images/portfolio/13.jpg'
+// import pImg2 from '../../images/portfolio/14.jpg'
+// import pImg3 from '../../images/portfolio/15.jpg'
+// import pImg4 from '../../images/portfolio/16.jpg'
+
+
+import pImg1 from '../../images/agregadas/engagement/engagement-1.png'
+import pImg2 from '../../images/agregadas/engagement/engagement-2.png'
+import pImg3 from '../../images/agregadas/engagement/engagement-3.png'
+// import pImg4 from '../../images/agregadas/portfolio/4.jpg'
+// import pImg5 from '../../images/agregadas/portfolio/5.jpg'
 
 
 const Portfolios = [
@@ -16,12 +23,12 @@ const Portfolios = [
     {
         Pimg:pImg2,
     },
-    {
-        Pimg:pImg3,
-    },
-    {
-        Pimg:pImg4,
-    }
+    // {
+    //     Pimg:pImg3,
+    // },
+    // {
+    //     Pimg:pImg4,
+    // }
 ]
 
 
@@ -56,7 +63,7 @@ const PortfolioSection3 = (props) => {
     return (
         <section className="wpo-portfolio-section-s2 section-padding" id="gallery">
             <div className="container-fluid">
-                <SectionTitle MainTitle={'Sweet Captured Moments'}/>
+                <SectionTitle MainTitle={'Nosotros'}/>
                 <div className="sortable-gallery">
                     <div className="row">
                         <div className="col-lg-12">

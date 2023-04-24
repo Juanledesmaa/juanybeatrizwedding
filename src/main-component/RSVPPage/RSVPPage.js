@@ -10,8 +10,8 @@ const RSVPPage =() => {
     return(
         <Fragment>
             <Navbar2/>
-            <PageTitle pageTitle={'RSVP'} pagesub={'RSVP'}/> 
-            <RSVP pt={'section-padding pt-200'}/>
+            <PageTitle pageTitle={'Confirmar asistencia'} pagesub={'RSVP'}/> 
+            <RSVP pt={'section-padding'}/>
             <EventSection/>
             <Footer/>
             <Scrollbar/>

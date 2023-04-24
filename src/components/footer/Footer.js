@@ -21,10 +21,8 @@ const Footer = (props) =>{
                     <div className="col col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                         <div className="widget about-widget">
                             <div className="widget-title">
-                                <Link onClick={ClickHandler} className="logo" to="/"><small>My</small>love<span><i
-                                    className="fi flaticon-dove"></i></span></Link>
+                                <Link onClick={ClickHandler} className="logo" to="/"><small>Juan</small>&<small>Beatriz</small></Link>
                             </div>
-                            <p>Blandit ipsum arcu donec auctor a, turpis vitae. Egestas pretium euenim non euoeu dignissim nulla nunc quisque</p>
                             <ul>
                                 <li>
                                     <Link onClick={ClickHandler} to="/">
@@ -52,13 +50,12 @@ const Footer = (props) =>{
                     <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
                         <div className="widget link-widget">
                             <div className="widget-title">
-                                <h3>Information</h3>
+                                <h3>Información</h3>
                             </div>
                             <ul>
-                                <li><Link onClick={ClickHandler} to="/about">About Us</Link></li>
-                                <li><Link onClick={ClickHandler} to="/blog">Latest News</Link></li>
-                                <li><Link onClick={ClickHandler} to="/accomodation">Accomodation</Link></li>
-                                <li><Link onClick={ClickHandler} to="/story">Our story</Link></li>
+                                <li><Link onClick={ClickHandler} to="/gallery">Nosotros</Link></li>
+                                <li><Link onClick={ClickHandler} to="/event">Cuando y Donde</Link></li>
+                                <li><Link onClick={ClickHandler} to="/rsvp">Confirmar asistencia</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -69,24 +66,12 @@ const Footer = (props) =>{
                             </div>
                             <div className="contact-ft">
                                 <ul>
-                                    <li><i className="fi flaticon-email"></i>Mylove@gmail.com</li>
-                                    <li><i className="fi flaticon-phone-call"></i>+888 (123) 869523</li>
-                                    <li><i className="fi flaticon-maps-and-flags"></i>New York – 1075 Firs Avenue
+                                    <li><i className="fi flaticon-email"></i>jlmanuel8540@gmail.com</li>
+                                    <li><i className="fi flaticon-phone-call"></i>+1 (404) 4352628</li>
+                                    <li><i className="fi flaticon-maps-and-flags"></i>2903 Rn Martin Street, East Point, GA, 30344
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div className="widget newsletter">
-                            <div className="widget-title">
-                                <h3>Newsletter</h3>
-                            </div>
-                            <form onSubmit={SubmitHandler}>
-                                <input type="text" placeholder="Email" required/>
-                                <button type="submit">Subscribe</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -96,8 +81,8 @@ const Footer = (props) =>{
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-12">
-                        <p className="copyright"> &copy; 2022 Mylove Template. Design By <Link onClick={ClickHandler}
-                                to="/">wpOceans</Link>. All Rights Reserved.</p>
+                        <p className="copyright"> &copy; 2023 Boda Juan & Beatriz. Designed By <Link onClick={ClickHandler}
+                                to="/">Juan Ledesma</Link>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@ import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import ConfirmButton from '../../components/ConfirmButton/ConfirmButton';
+import VideoSection from "../../components/VideoSection";
 
 
 
@@ -22,14 +23,10 @@ const HomePage3 =() => {
         <Fragment>
             <Navbar2/>
             <Hero3/>
-            <ConfirmButton/>
-            <StorySection2/>
-            <PortfolioSection2 gClass={'pt-0'}/>
-            <RSVP2/>
-            <BrideGrooms/>
+            <PortfolioSection2 gClass={'pt-40'}/>
             <EventSection/>
-            <PartnerSection/>
-            <BlogSection/>
+            <VideoSection/>
+            <RSVP2/>
             <Footer/>
             <Scrollbar/>
         </Fragment>

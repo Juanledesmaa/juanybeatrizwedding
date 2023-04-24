@@ -10,89 +10,8 @@ const menus = [
     {
         id: 1,
         title: 'Home',
-        link: '/home',
-        submenu: [
-            {
-                id: 11,
-                title: 'Home style 1',
-                link: '/home'
-            },
-            {
-                id: 12,
-                title: 'Home style 2',
-                link: '/home2'
-            },
-            {
-                id: 13,
-                title: 'Home style 3',
-                link: '/home3'
-            },
-            {
-                id: 15,
-                title: 'Home Static Hero',
-                link: '/home4'
-            },
-            {
-                id: 16,
-                title: 'Home Box Style',
-                link: '/home5'
-            },
-            {
-                id: 17,
-                title: 'Home particles Effect',
-                link: '/home6'
-            },
-            {
-                id: 18,
-                title: 'Home Video Banar',
-                link: '/home7'
-            },
-            {
-                id: 14,
-                title: 'Invitation',
-                link: '/invitation'
-            },
-        ]
+        link: '/',
     },
-    {
-        id: 6,
-        title: 'Blog',
-        link: '/blog',
-        submenu: [
-            {
-                id: 61,
-                title: 'Blog',
-                link: '/blog'
-            },
-            {
-                id: 62,
-                title: 'Blog Left sidebar',
-                link: '/blog-left-sidebar'
-            },
-            {
-                id: 63,
-                title: 'Blog full width',
-                link: '/blog-fullwidth'
-            },
-            {
-                id: 64,
-                title: 'Blog single',
-                link: '/blog-single/1'
-            },
-            {
-                id: 65,
-                title: 'Blog single Left sidebar',
-                link: '/blog-single-left-sidebar/1'
-            },
-            {
-                id: 66,
-                title: 'Blog single full width',
-                link: '/blog-single-fullwidth/1'
-            },
-        ]
-    }
-
-
 ]
 
 
@@ -142,11 +61,7 @@ const MobileMenu = () => {
                             </ListItem>
                         )
                     })}
-                    <li><Link activeClass="active" to="couple" spy={true} smooth={true} duration={500} >Couple</Link></li>
-                    <li><Link activeClass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
-                    <li><Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
-                    <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
-                    <li><Link activeClass="active" to="event" spy={true} smooth={true} duration={500} >Events</Link></li>
+                    <li><Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500} >Confirmar asistencia</Link></li>
                 </ul>
 
             </div>
