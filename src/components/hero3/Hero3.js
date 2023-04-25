@@ -8,13 +8,17 @@ import 'swiper/css/pagination';
 import hero1 from '../../images/agregadas/image_banner.png'
 import hero2 from '../../images/agregadas/image_banner2.jpg'
 import hero3 from '../../images/agregadas/image_banner3.jpg'
+import hero4 from '../../images/agregadas/image_banner4.jpg'
+import hero5 from '../../images/agregadas/image_banner5.png'
 import { Link } from "react-router-dom";
+
+const imageUrls = [hero1, hero2, hero3, hero4, hero5];
 
 const Hero3 = (props) => {
 
-    const ClickHandler = () =>{
+    const ClickHandler = () => {
         window.scrollTo(10, 0);
-     }
+    }
 
     return (
         <section className="wpo-hero-slider wpo-hero-style-3">
@@ -24,7 +28,7 @@ const Hero3 = (props) => {
                     <p>Nos vamos a casar en Octubre 19, 2023</p>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
-                            <TimeCountDown/>
+                            <TimeCountDown />
                         </div>
 
                         <section className={`wpo-team-section confirm-button-area`}>
@@ -64,24 +68,13 @@ const Hero3 = (props) => {
                 parallax={true}
                 navigation
             >
-                <SwiperSlide>
-                    <div className="swiper-slide">
-                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero1})` }}>
+                {imageUrls.map((imageUrl, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="swiper-slide">
+                            <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${imageUrl})` }}></div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swiper-slide">
-                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero2})` }}>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swiper-slide">
-                        <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${hero3})` }}>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                    </SwiperSlide>
+                ))}
                 ...
             </Swiper>
 
