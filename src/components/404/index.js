@@ -14,9 +14,9 @@ const Error = (props) => {
                                 <img src={erimg} alt=""/>
                             </div>
                             <div className="error-message">
-                                <h3>Oops! Page Not Found!</h3>
-                                <p>We’re sorry but we can’t seem to find the page you requested. This might be because you have typed the web address incorrectly.</p>
-                                <Link to="/home" className="theme-btn-s3">Back to home</Link>
+                                <h3>Oops! Ha ocurrido un error!</h3>
+                                <p>Vuelve a intentarlo mas tarde.</p>
+                                <Link to="/" className="theme-btn-s3">Volver a la pagina principal</Link>
                             </div>
                         </div>
                     </div>

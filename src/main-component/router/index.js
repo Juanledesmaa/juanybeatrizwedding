@@ -31,6 +31,7 @@ import ComingSoonPage from '../ComingSoonPage/ComingSoonPage'
 import LoginPage from '../LoginPage'
 import SignUpPage from '../SignUpPage'
 import ForgotPassword from '../ForgotPassword'
+import SuccessPage from '../ErrorPage/SuccessPage';
 
 const AllRoute = () => {
 
@@ -69,6 +70,7 @@ const AllRoute = () => {
           <Route path='login' element={<LoginPage />} />
           <Route path='register' element={<SignUpPage />} />
           <Route path='forgot-password' element={<ForgotPassword />} />
+          <Route path='success' element={<SuccessPage />} />
         </Routes>
       </BrowserRouter>
 

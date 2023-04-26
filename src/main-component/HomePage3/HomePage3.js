@@ -25,8 +25,6 @@ const HomePage3 =() => {
             <Hero3/>
             <PortfolioSection2 gClass={'pt-40'}/>
             <EventSection/>
-            <VideoSection/>
-            <RSVP2/>
             <Footer/>
             <Scrollbar/>
         </Fragment>
