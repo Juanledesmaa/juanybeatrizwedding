@@ -13,20 +13,31 @@ import shape2 from '../../images/rsvp/shape2.png'
 const RSVP2 = (props) => {
 
     const [forms, setForms] = useState({
-        name: '',
-        email: '',
-        address: '',
-        meal: '',
-        attend: '',
-        guest: ''
+        nombre: '',
+        tipo_paella: '',
+        confirma: '',
     });
     const [validator] = useState(new SimpleReactValidator({
         className: 'errorMessage'
     }));
-    const changeHandler = e => {
+    const changeHandler = async (e) => {
         setForms({ ...forms, [e.target.name]: e.target.value })
         if (validator.allValid()) {
-            validator.hideMessages();
+            // validator.hideMessages();
+
+            try {
+                var myHeaders = new Headers();
+                myHeaders.append("Content-Type", "application/json");
+                console.log(forms);
+                // const response = await fetch('https://v1.nocodeapi.com/juanledesma/google_sheets/zzAMnhOUjKquAfmA/addRows?tabId=hoja1', {
+                //     method: 'POST',
+                //     headers: myHeaders,
+                //     body: JSON.stringify()
+                // })
+            } catch (error) {
+                
+            }
+
         } else {
             validator.showMessages();
         }
@@ -35,6 +46,7 @@ const RSVP2 = (props) => {
     const submitHandler = e => {
         e.preventDefault();
         if (validator.allValid()) {
+            console.log(e);
             validator.hideMessages();
             setForms({
                 name: '',
@@ -44,6 +56,7 @@ const RSVP2 = (props) => {
                 attend: '',
                 guest: ''
             })
+
         } else {
             validator.showMessages();
         }
@@ -63,6 +76,8 @@ const RSVP2 = (props) => {
                                         </div>
                                         <h2>¿Vienes a nuestra boda?</h2>
                                     </div>
+
+                                    
                                     <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active" >
                                         <div className="form-field">
                                             <input
@@ -72,19 +87,8 @@ const RSVP2 = (props) => {
                                                 onBlur={(e) => changeHandler(e)}
                                                 onChange={(e) => changeHandler(e)}
                                                 className="form-control"
-                                                placeholder="Tu nombre" />
+                                                placeholder="Tu nombre completo" />
                                             {validator.message('name', forms.name, 'required|alpha_space')}
-                                        </div>
-                                        <div className="form-field">
-                                            <input
-                                                value={forms.email}
-                                                type="email"
-                                                name="email"
-                                                onBlur={(e) => changeHandler(e)}
-                                                onChange={(e) => changeHandler(e)}
-                                                className="form-control"
-                                                placeholder="Tu email" />
-                                            {validator.message('email', forms.email, 'required|email')}
                                         </div>
                                         <div className="radio-buttons">
                                             <p>
@@ -100,28 +104,11 @@ const RSVP2 = (props) => {
                                             <select
                                                 onBlur={(e) => changeHandler(e)}
                                                 onChange={(e) => changeHandler(e)}
-                                                value={forms.guest}
-                                                type="text"
-                                                className="form-control"
-                                                name="guest">
-                                                <option>Numero de invitados</option>
-                                                <option>01</option>
-                                                <option>02</option>
-                                                <option>03</option>
-                                                <option>04</option>
-                                                <option>05</option>
-                                            </select>
-                                            {validator.message('guest', forms.guest, 'required')}
-                                        </div>
-                                        <div className="form-field">
-                                            <select
-                                                onBlur={(e) => changeHandler(e)}
-                                                onChange={(e) => changeHandler(e)}
                                                 value={forms.meal}
                                                 type="text"
                                                 className="form-control"
                                                 name="meal">
-                                                <option>Preferencias el menu</option>
+                                                <option>Preferencias del menu</option>
                                                 <option>Paella vegetariana</option>
                                                 <option>Paella española</option>
                                             </select>
