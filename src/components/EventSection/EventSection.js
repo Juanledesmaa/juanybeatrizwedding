@@ -16,7 +16,7 @@ const EventSection = (props) => {
     return (
         <section className={`wpo-event-section section-padding ${props.eClass}`} id="event">
             <div className="container">
-                <SectionTitleS2 MainTitle={'Cuando y Donde'} />
+                <SectionTitleS2 MainTitle={'Cuando y Donde'} IconClass={'flaticon-maps-and-flags'} />
                 <div className="wpo-event-wrap">
                     <div className="row">
                         {Events.map((event, eitem) => (

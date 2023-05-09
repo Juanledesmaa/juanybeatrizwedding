@@ -7,6 +7,10 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate from react
 
 const RSVP = (props) => {
 
+    const scrollTopHandler = () =>{
+        window.scrollTo(10, 0);
+     }
+
     const [selectedOption, setSelectedOption] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate(); // Initialize useNavigate
@@ -36,6 +40,7 @@ const RSVP = (props) => {
         }
     };
 
+
     const submitHandler = async (e) => {
         e.preventDefault();
         if (validator.allValid()) {
@@ -43,26 +48,49 @@ const RSVP = (props) => {
             try {
                 const valuesArray = Object.values(forms);
 
+
+                // USE GOOGLE SHEETS
+                // var myHeaders = new Headers();
+                // myHeaders.append("Content-Type", "application/json");
+                // var requestOptions = {
+                //     method: "post",
+                //     headers: myHeaders,
+                //     redirect: "follow",
+                //     body: JSON.stringify([valuesArray])
+                // };
+
+                // fetch("https://v1.nocodeapi.com/juanledesma/google_sheets/wmAKvxjiEzQWfkyQ?tabId=hoja1", requestOptions)
+                //     .then(response => response.text())
+                //     .then(result => {
+                //         validator.hideMessages()
+                //         setForms({ ...forms, nombre: '', tipo_paella: '', confirma: 'SI' });
+                //         console.log(result)
+                //         navigate('/success');
+                //     })
+                //     .catch(error => console.log('error', error));
+
+
+                // USE AIRTABLE
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
                 var requestOptions = {
                     method: "post",
                     headers: myHeaders,
                     redirect: "follow",
-                    body: JSON.stringify([valuesArray])
+                    body: JSON.stringify([forms])
                 };
 
-                fetch("https://v1.nocodeapi.com/juanledesma/google_sheets/wmAKvxjiEzQWfkyQ?tabId=hoja1", requestOptions)
+                fetch("https://v1.nocodeapi.com/juanledesma/airtable/SiNOefhYVqxXQsjs?tableName=lista_principal", requestOptions)
                     .then(response => response.text())
                     .then(result => {
                         validator.hideMessages()
                         setForms({ ...forms, nombre: '', tipo_paella: '', confirma: 'SI' });
-                        console.log(result)
-                        navigate('/success');
+                        scrollTopHandler();
+                        navigate('/success'); 
                     })
                     .catch(error => console.log('error', error));
+
             } catch (error) {
-                console.log(error);
                 navigate('/404');
             }
 
@@ -78,10 +106,10 @@ const RSVP = (props) => {
                     <div className="wpo-contact-form-area">
 
                         {isLoading ? (
-                            <SectionTitle MainTitle={'Cargando...'} />
+                            <SectionTitle MainTitle={'Cargando...'} IconClass={'flaticon-wedding'} />
                         ) : (
                             <>
-                                <SectionTitle MainTitle={'¿Vienes a nuestra boda?'} />
+                                <SectionTitle MainTitle={'¿Vienes a nuestra boda?'} IconClass={'flaticon-wedding'} />
 
                                 <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active" >
                                     <div className="form-field">

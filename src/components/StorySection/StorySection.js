@@ -1,100 +1,89 @@
 import React from 'react';
 import SectionTitle from '../SectionTitle'
-import sImg1 from '../../images/story/1.jpg'
-import sImg2 from '../../images/story/2.jpg'
-import sImg3 from '../../images/story/3.jpg'
-
 import shape1 from '../../images/rsvp/shape1.png'
 import shape2 from '../../images/rsvp/shape2.png'
 
+const Questions = [
+    {
+        question: '¿QUÉ NOS GUSTARÍA DE REGALO?',
+        answer: 'Agradecemos tu generosidad, puedes usar cualquier de los siguientes metodos de pago. ¡Gracias por su cariño y apoyo!',
+        payments: [
+            {
+            name: "Zelle",
+            message: "jlmanuel8540@gmail.com"
+            },
+            {
+                name: "ATH Mobile",
+                message: "787 393-3477"
+            },
+            {
+                name: "PayPal",
+                message: "Beatrizpg997@gmail.com"
+            }
+        ]
+    },
+    {
+        question: '¿CUÁL ES EL CÓDIGO DE VESTIMENTA?',
+        answer: 'El código de vestimenta para nuestra boda es cóctel/formal. Se sugieren colores de otoño, no blanco y hombres evitar jeans.'
+    },
+    {
+        question: '¿HAY SITIO DE ESTACIONAMIENTO?',
+        answer: '¡Sí, por supuesto! El lugar cuenta con suficiente espacio de estacionamiento para todos los invitados.'
+    },
+    {
+        question: '¿CÓMO LLEGO AL LUGAR DEL EVENTO?',
+        answer: 'Nos complace informarles que tanto la ceremonia como la recepción se llevarán a cabo en la dirección 2903 RN Martin St # R, East Point, GA 30344, en una antigua fábrica conocida anteriormente como Atlanta Utility Works.'
+    },
+    {
+        question: '¿PUEDO LLEVAR ACOMPAÑANTE?',
+        answer: 'Lamentablemente, no podemos acomodar acompañantes adicionales en nuestra boda, ya que queremos mantener la celebración muy íntima y cada asiento ya se encuentra asignado.'
+    },
+    {
+        question: '¿A QUE HORA COMIENZA LA CEREMONIA?',
+        answer: 'Queremos recordarles que la ceremonia dará inicio puntualmente a las 3:45pm y les solicitamos respetuosamente que lleguen a tiempo. Agradecemos de antemano su puntualidad.'
+    },
+    {
+        question: 'RECOMENDACIONES GENERALES',
+        answer: 'Debido a posibles vientos, se sugiere llevar una pashmina o algún abrigo ligero para estar cómodo durante la ceremonia y la recepción. Además, para mantener a nuestros invitados seguros y cómodos en nuestro entorno rústico, se sugiere evitar los tacones de punta. Gracias por tomarte el tiempo para considerar nuestras sugerencias. ¡Esperamos verte en nuestro gran día!'
+    },
+];
+
 const StorySection = (props) => {
-
-
     return (
-        <section className="story-section section-padding" id="story">
+        <section className="story-section" id="story">
             <div className="container">
                 <div className="row">
-                    <SectionTitle MainTitle={'Our Sweet Story'} />
+                    <SectionTitle MainTitle={'Preguntas frecuentes'} IconClass={'flaticon-left-quote'} />
                 </div>
                 <div className="row">
                     <div className="col col-xs-12">
                         <div className="story-timeline">
-                            <div className="row">
-                                <div className="col offset-lg-6 col-lg-6 col-12 text-holder">
-                                    <span className="heart">
-                                        <i className="fi flaticon-balloon"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="story-timeline-item s1">
-                                <div className="row align-items-center">
-                                    <div className="col col-lg-6 col-12">
-                                        <div className="img-holder right-align-text fadeInLeftSlow" data-wow-duration="1500ms">
-                                            <img src={sImg1} className="img img-responsive" alt="stroy"/>
-                                        </div>
-                                    </div>
-                                    <div className="col col-lg-6 col-12">
-                                        <div className="story-text left-align-text fadeInRightSlow" data-wow-duration="2000ms">
-                                            <h3>First Time We Meet</h3>
-                                            <span className="date">19 Jan 2018</span>
-                                            <div className="line-shape">
-                                                <div className="outer-ball">
-                                                    <div className="inner-ball"></div>
+                            {Questions.map((question, index) => (
+                                <div className="story-timeline-item s1 d-flex justify-content-center" key={index}>
+                                    <div className="row align-items-center">
+                                        <div className="col col-12">
+                                            <div className="story-text left-align-text fadeInRightSlow" data-wow-duration="2000ms">
+                                                <h3>{question.question}</h3>
+                                                <div className="line-shape">
+                                                    <div className="outer-ball">
+                                                        <div className="inner-ball"></div>
+                                                    </div>
                                                 </div>
+                                                <p>{question.answer}</p>
+                                                {question.payments && question.payments.length > 0 && (
+                                                    <ul>
+                                                        {question.payments.map((listItem, listItemIndex) => (
+                                                            <li key={listItemIndex}>
+                                                                <strong>{listItem.name}</strong>: {listItem.message}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, constetur adicng elit. Ultricies nulla mi tempus mcorper for praesent. Ultricies interdum volutpat morbi nam ornare neque elit leo, diam. Malesuada enim ac amurna tempor vel duis.</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="story-timeline-item">
-                                <div className="row align-items-center">
-                                    <div className="col col-lg-6 col-12 order-lg-1 order-2 text-holder left-text">
-                                        <div className="story-text right-align-text fadeInLeftSlow" data-wow-duration="2000ms">
-                                            <h3>Our First Date</h3>
-                                            <span className="date">22 May 2021</span>
-                                            <div className="line-shape s2">
-                                                <div className="outer-ball">
-                                                    <div className="inner-ball"></div>
-                                                </div>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet, constetur adicng elit. Ultricies nulla mi tempus mcorper for praesent. Ultricies interdum volutpat morbi nam ornare neque elit leo, diam. Malesuada enim ac amurna tempor vel duis.</p>
-                                        </div>
-                                    </div>
-                                    <div className="col col-lg-6 col-12 order-lg-2 order-1">
-                                        <div className="img-holder left-align-text">
-                                            <img src={sImg2} alt="stroy" className="img img-responsive fadeInRightSlow" data-wow-duration="1500ms"/>
-                                                <span className="heart">
-                                                    <i className="fi flaticon-dance"></i>
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="story-timeline-item">
-                                <div className="row align-items-center">
-                                    <div className="col col-lg-6 col-12">
-                                        <div className="img-holder right-align-text left-site right-heart">
-                                            <img src={sImg3} alt="stroy" className="img img-responsive fadeInLeftSlow" data-wow-duration="1500ms"/>
-                                                <span className="heart">
-                                                    <i className="fi flaticon-dove"></i>
-                                                </span>
-                                        </div>
-                                    </div>
-                                    <div className="col col-lg-6 col-12">
-                                        <div className="story-text left-align-text fadeInRightSlow" data-wow-duration="2000ms">
-                                            <h3>She Said Yes!</h3>
-                                            <span className="date">15 June 2022</span>
-                                            <div className="line-shape">
-                                                <div className="outer-ball">
-                                                    <div className="inner-ball"></div>
-                                                </div>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet, constetur adicng elit. Ultricies nulla mi tempus mcorper for praesent. Ultricies interdum volutpat morbi nam ornare neque elit leo, diam. Malesuada enim ac amurna tempor vel duis.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

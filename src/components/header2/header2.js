@@ -20,12 +20,12 @@ const Header2 = (props) => {
                   <MobileMenu2 />
                 </div>
               </div>
-              <div className="col-lg-2 col-md-6 col-6">
+              <div className="col-lg-2 col-sm-6 col-2">
                 <div className="navbar-header">
                   <Link className="navbar-brand logo" to='/'><small>Juan</small>&<small>Beatriz</small></Link>
                 </div>
               </div>
-              <div className="col-lg-8 col-md-1 col-1">
+              <div className="col-10">
                 <div id="navbar" className="collapse navbar-collapse navigation-holder">
                   <button className="menu-close"><i className="ti-close"></i></button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
@@ -37,6 +37,9 @@ const Header2 = (props) => {
                     </li>
                     <li>
                       <Link onClick={ClickHandler} to="/event">Cuando y Donde</Link>
+                    </li>
+                    <li>
+                      <Link onClick={ClickHandler} to="/faq">Preguntas frecuentes</Link>
                     </li>
                     <li>
                       <Link onClick={ClickHandler} to="/rsvp">Confirmar asistencia</Link>

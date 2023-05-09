@@ -12,11 +12,8 @@ const StoryPage =() => {
     return(
         <Fragment>
             <Navbar2/>
-            <PageTitle pageTitle={'Our Story'} pagesub={'Story'}/> 
+            <PageTitle pageTitle={'Preguntas frecuentes'} pagesub={'Preguntas-frecuentes'}/> 
             <StorySection/>
-            <VideoSection/>
-            <PortfolioSection/>
-            <PartnerSection pClass={'section-padding pt-0'}/>
             <Footer/>
             <Scrollbar/>
         </Fragment>

@@ -55,7 +55,7 @@ const AllRoute = () => {
           <Route path='gallery-s2' element={<GalleryPage2 />} />
           <Route path='gallery-slide' element={<GallerySlide />} />
           <Route path='rsvp' element={<RSVPPage />} />
-          <Route path='story' element={<StoryPage />} />
+          <Route path='faq' element={<StoryPage />} />
           <Route path='accomodation' element={<AccomodationPage />} />
           <Route path='event' element={<EventPage />} />
           <Route path='groom-bride' element={<BrideGroomPage />} />
@@ -71,6 +71,7 @@ const AllRoute = () => {
           <Route path='register' element={<SignUpPage />} />
           <Route path='forgot-password' element={<ForgotPassword />} />
           <Route path='success' element={<SuccessPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
 

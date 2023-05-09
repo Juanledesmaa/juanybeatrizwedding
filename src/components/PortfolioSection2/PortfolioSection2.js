@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactFancyBox from 'react-fancybox'
 import 'react-fancybox/lib/fancybox.css'
 import SectionTitle from '../SectionTitle'
@@ -28,30 +28,31 @@ const Portfolios = [
     //     Pimg:pImg5,
     // }
 ] 
-
 const PortfolioSection2 = (props) => {
-    return(
-        <section className={`wpo-portfolio-section section-padding ${props.gClass}`} id="gallery">
-            <div className="container">
-                <SectionTitle MainTitle={'Nosotros'}/>
-                <div className="sortable-gallery">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="portfolio-grids gallery-container clearfix">
-                                {Portfolios.map((portfolio, pitem) => (
-                                    <div className="grid" key={pitem}>
-                                        <div className="img-holder">
-                                        <img src={portfolio.Pimg} alt="Image" />
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+    return (
+      <section className={`wpo-portfolio-section section-padding ${props.gClass}`} id="gallery">
+        <div className="container">
+          <SectionTitle MainTitle={'Nosotros'}/>
+          <div className="sortable-gallery">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="portfolio-grids gallery-container clearfix animated-portfolio">
+                  {Portfolios.map((portfolio, pitem) => (
+                    <div key={pitem}>
+                      <div className="img-holder">
+                        <img src={portfolio.Pimg} alt="Image" className={`grid ${pitem % 2 === 0 ? 'even' : 'odd'} ${pitem === currentImageIndex ? 'animate-right' : 'animate-left'}`} />
+                      </div>
                     </div>
+                  ))}
                 </div>
+              </div>
             </div>
-        </section>
-    )
-}
-
-export default PortfolioSection2;
+          </div>
+        </div>
+      </section>
+    );
+  };
+  
+  export default PortfolioSection2;

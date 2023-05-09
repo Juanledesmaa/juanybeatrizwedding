@@ -11,10 +11,8 @@ export default function Navbar2(props) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const className = scroll > 80 ? "fixed-navbar animated fadeInDown active" : "fixed-navbar";
-
   return (
-    <div className={className}>
+    <div className="fixed-navbar">
         <Header2 Logo={props.Logo} topbarBlock={props.topbarBlock} hclass={props.hclass} />
     </div>
   ); 

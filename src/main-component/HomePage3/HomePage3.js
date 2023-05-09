@@ -14,6 +14,7 @@ import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import ConfirmButton from '../../components/ConfirmButton/ConfirmButton';
 import VideoSection from "../../components/VideoSection";
+import StorySection from '../../components/StorySection/StorySection';
 
 
 
@@ -25,6 +26,7 @@ const HomePage3 =() => {
             <Hero3/>
             <PortfolioSection2 gClass={'pt-40'}/>
             <EventSection/>
+            <StorySection/>
             <Footer/>
             <Scrollbar/>
         </Fragment>
