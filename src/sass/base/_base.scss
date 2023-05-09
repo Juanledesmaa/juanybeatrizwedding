@@ -316,5 +316,46 @@ img{
 
 .hero-success {
     width: 100%;
+
+    .down-here {
+        font-weight: 100 !important;
+        margin-top: 30px;
+    }
+}
+
+.animated-portfolio {
+/* Animation for left-to-right */
+@keyframes slide-from-left {
+    0% {
+      transform: translateX(-25%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
+  
+  /* Animation for right-to-left */
+  @keyframes slide-from-right {
+    0% {
+      transform: translateX(25%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the image */
+  img.animate-left {
+    animation: slide-from-left 1.5s ease-out forwards;
+  }
+  
+  img.animate-right {
+    animation: slide-from-right 1.5s ease-out forwards;
+  }
+}
+
 

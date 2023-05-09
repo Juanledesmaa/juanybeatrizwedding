@@ -23,7 +23,7 @@ const Footer = (props) =>{
                             <div className="widget-title">
                                 <Link onClick={ClickHandler} className="logo" to="/"><small>Juan</small>&<small>Beatriz</small></Link>
                             </div>
-                            <ul>
+                            {/* <ul>
                                 <li>
                                     <Link onClick={ClickHandler} to="/">
                                         <i className="ti-facebook"></i>
@@ -44,7 +44,7 @@ const Footer = (props) =>{
                                         <i className="ti-google"></i>
                                     </Link>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                     <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
@@ -62,7 +62,7 @@ const Footer = (props) =>{
                     <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
                         <div className="widget wpo-service-link-widget">
                             <div className="widget-title">
-                                <h3>Contact Us</h3>
+                                <h3>Contacto</h3>
                             </div>
                             <div className="contact-ft">
                                 <ul>

@@ -21,16 +21,18 @@ const HeroSuccess = (props) => {
             <div className="wedding-announcement">
                 <div className="couple-text">
                 <h2>Gracias por confirmar tu asistencia</h2>
-                <p>Esperamos con ansias celebrar contigo</p>
+                <p className="down-here">Baja para encontrar más detalles acerca de este día</p>
                     <div className="wpo-wedding-date">
                         <section className={`wpo-team-section confirm-button-area`}>
                             <div className="container">
                                 <div className="wpo-team-wrap">
                                     <div className="row justify-content-center">
                                         <div className="col-12 text-center">
-                                            <div className="confirm-area">
-                                            <Link onClick={ClickHandler} className="theme-btn confirm-btn no-padding" to="/rsvp">Volver a la pagina principal</Link>
-                                            </div>
+                                            <div class="arrow arrow-first"></div>
+                                            <div class="arrow arrow-second"></div>
+                                            {/* <div className="confirm-area">
+                                                <Link onClick={ClickHandler} className="theme-btn confirm-btn no-padding" to="/rsvp">Volver a la pagina principal</Link>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>

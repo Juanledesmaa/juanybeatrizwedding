@@ -23,6 +23,11 @@ const menus = [
     },
     {
         id: 4,
+        title: 'Preguntas frecuentes',
+        link: '/faq',
+    },
+    {
+        id: 5,
         title: 'Confirmar asistencia',
         link: '/RSVP',
     },

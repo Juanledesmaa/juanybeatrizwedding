@@ -40,6 +40,10 @@ const Hero3 = (props) => {
                                             <Link onClick={ClickHandler} className="theme-btn confirm-btn no-padding" to="/rsvp">Confirmar asistencia</Link>
                                             </div>
                                         </div>
+
+                                        <div className="col-12 text-center">
+                                            <p className='until-text'>Por favor confirmar antes de Septiembre 1 de 2023</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
