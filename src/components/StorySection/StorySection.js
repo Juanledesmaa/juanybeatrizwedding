@@ -6,14 +6,14 @@ import shape2 from '../../images/rsvp/shape2.png'
 const Questions = [
     {
         question: '¿QUÉ NOS GUSTARÍA DE REGALO?',
-        answer: 'Agradecemos tu generosidad, puedes usar cualquier de los siguientes metodos de pago. ¡Gracias por su cariño y apoyo!',
+        answer: 'Agradecemos tu generosidad, puedes hacernos llegar tu regalo en efectivo o usar cualquiera de los siguientes metodos. ¡Gracias por su cariño y apoyo!',
         payments: [
             {
             name: "Zelle",
             message: "jlmanuel8540@gmail.com"
             },
             {
-                name: "ATH Mobile",
+                name: "ATH Móvil",
                 message: "787 393-3477"
             },
             {
@@ -24,7 +24,7 @@ const Questions = [
     },
     {
         question: '¿CUÁL ES EL CÓDIGO DE VESTIMENTA?',
-        answer: 'El código de vestimenta para nuestra boda es cóctel/formal. Se sugieren colores de otoño, no blanco y hombres evitar jeans.'
+        answer: 'El código de vestimenta para nuestra boda es cóctel/formal. No blanco y hombres no jeans.'
     },
     {
         question: '¿HAY SITIO DE ESTACIONAMIENTO?',

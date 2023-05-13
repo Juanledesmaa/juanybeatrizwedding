@@ -66,8 +66,8 @@ const Footer = (props) =>{
                             </div>
                             <div className="contact-ft">
                                 <ul>
-                                    <li><i className="fi flaticon-email"></i>jlmanuel8540@gmail.com</li>
-                                    <li><i className="fi flaticon-phone-call"></i>+1 (404) 4352628</li>
+                                    <li><i className="fi flaticon-email"></i>beatrizpg997@gmail.com</li>
+                                    <li><i className="fi flaticon-phone-call"></i>+1 (787) 3933477</li>
                                     <li><i className="fi flaticon-maps-and-flags"></i>2903 Rn Martin Street, East Point, GA, 30344
                                     </li>
                                 </ul>
