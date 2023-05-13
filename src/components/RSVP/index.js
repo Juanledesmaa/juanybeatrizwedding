@@ -11,7 +11,7 @@ const RSVP = (props) => {
         window.scrollTo(10, 0);
      }
 
-    const [selectedOption, setSelectedOption] = useState("");
+    const [selectedOption, setSelectedOption] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate(); // Initialize useNavigate
 
@@ -19,6 +19,7 @@ const RSVP = (props) => {
         setSelectedOption(event.target.value);
         setForms(prevForms => ({
             ...prevForms,
+            tipo_paella: event.target.value !== 'NO' ? '' : 'N/A',
             confirma: event.target.value,
         }));
     };
@@ -47,7 +48,6 @@ const RSVP = (props) => {
             setIsLoading(true);
             try {
                 const valuesArray = Object.values(forms);
-
 
                 // USE GOOGLE SHEETS
                 // var myHeaders = new Headers();
@@ -86,7 +86,7 @@ const RSVP = (props) => {
                         validator.hideMessages()
                         setForms({ ...forms, nombre: '', tipo_paella: '', confirma: 'SI' });
                         scrollTopHandler();
-                        navigate('/success'); 
+                        navigate('/success', { state: { confirma: forms.confirma } }); 
                     })
                     .catch(error => console.log('error', error));
 
@@ -133,20 +133,23 @@ const RSVP = (props) => {
                                             <label htmlFor="not">Lo siento, no podré asistir</label>
                                         </p>
                                     </div>
-                                    <div className="form-field">
-                                        <select
-                                            onBlur={(e) => changeHandler(e)}
-                                            onChange={(e) => changeHandler(e)}
-                                            value={forms.tipo_paella}
-                                            type="text"
-                                            className="form-control"
-                                            name="tipo_paella">
-                                            <option>Preferencias del menu</option>
-                                            <option>Paella española (Contiene mariscos)</option>
-                                            <option>Paella vegetariana</option>
-                                        </select>
-                                        {validator.message('tipo_paella', forms.tipo_paella, 'required')}
-                                    </div>
+                                        {/* {selectedOption !== 'NO' && ( */}
+                                        <div className={`form-field ${selectedOption !== 'NO' ? '' : 'hidden'}`}>
+                                                <select
+                                                    onBlur={(e) => changeHandler(e)}
+                                                    onChange={(e) => changeHandler(e)}
+                                                    value={forms.tipo_paella}
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="tipo_paella">
+                                                    <option>Preferencias del menu</option>
+                                                    <option>Paella española (Contiene mariscos)</option>
+                                                    <option>Paella vegetariana</option>
+                                                    <option disabled hidden value="No asiste">N/A</option>
+                                                </select>
+                                                {validator.message('tipo_paella', forms.tipo_paella, 'required')}
+                                            </div>
+                                        {/* )} */}
                                     <div className="submit-area">
                                         <button type="submit" className="theme-btn">Enviar</button>
                                     </div>

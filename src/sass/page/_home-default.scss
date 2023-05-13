@@ -1601,7 +1601,7 @@ $ani-delay: 1s;
 .arrow {
     opacity: 0;
     position: absolute;
-    left: 50%;
+    left: 25%;
     top: 70%;
     transform-origin: 50% 50%;
     transform: translate3d(-50%, -50%, 0);
@@ -1627,12 +1627,12 @@ $ani-delay: 1s;
 }
 
 .arrow:before {
-    transform: rotate(45deg) translateX(-23%);
+    transform: rotate(45deg) translateX(-22%);
     transform-origin: top left;
 }
 
 .arrow:after {
-    transform: rotate(-45deg) translateX(23%);
+    transform: rotate(-45deg) translateX(22%);
     transform-origin: top right;
 }
 
@@ -1640,7 +1640,7 @@ $ani-delay: 1s;
 @keyframes arrow-movement {
     0% { 
         opacity: 0;
-        top: 65%;
+        top: 35%;
     }
     70% {
         opacity: 1;
@@ -1648,5 +1648,12 @@ $ani-delay: 1s;
     100% { 
         opacity: 0;
     }
+}
+
+.arrow-container {
+	margin: 0 auto;
+    width: 60px;
+    height: 60px;
+	position: relative;
 }
 
