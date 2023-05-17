@@ -64,11 +64,7 @@ const StorySection = (props) => {
                                         <div className="col col-12">
                                             <div className="story-text left-align-text fadeInRightSlow" data-wow-duration="2000ms">
                                                 <h3>{question.question}</h3>
-                                                <div className="line-shape">
-                                                    <div className="outer-ball">
-                                                        <div className="inner-ball"></div>
-                                                    </div>
-                                                </div>
+                                                <br></br>
                                                 <p>{question.answer}</p>
                                                 {question.payments && question.payments.length > 0 && (
                                                     <ul>

@@ -121,7 +121,7 @@ const RSVP = (props) => {
                                             onChange={(e) => changeHandler(e)}
                                             className="form-control"
                                             placeholder="Tu nombre completo" />
-                                        {validator.message('nombre', forms.nombre, 'required|alpha_space')}
+                                        {validator.message('nombre', forms.nombre, 'required')}
                                     </div>
                                     <div className="radio-buttons">
                                         <p>
@@ -145,7 +145,6 @@ const RSVP = (props) => {
                                                     <option>Preferencias del menu</option>
                                                     <option>Paella española (Contiene mariscos)</option>
                                                     <option>Paella vegetariana</option>
-                                                    <option disabled hidden value="No asiste">N/A</option>
                                                 </select>
                                                 {validator.message('tipo_paella', forms.tipo_paella, 'required')}
                                             </div>

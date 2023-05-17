@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter, } from "react-router-dom";
 
 import Homepage from '../HomePage'
 import Homepage2 from '../HomePage2/HomePage2'
@@ -37,7 +37,7 @@ const AllRoute = () => {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage3 />} />
           <Route path='home' element={<Homepage />} />
@@ -73,7 +73,45 @@ const AllRoute = () => {
           <Route path='success' element={<SuccessPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+
+      <HashRouter>
+        <Routes>
+          <Route exact path='/' element={<HomePage3 />} />
+          <Route exact path='home' element={<Homepage />} />
+          <Route exact path='home2' element={<Homepage2 />} />
+          <Route exact path='home3' element={<HomePage3 />} />
+          <Route exact path='home4' element={<HomePage4 />} />
+          <Route exact path='home5' element={<HomePage5 />} />
+          <Route exact path='home6' element={<HomePage6 />} />
+          <Route exact path='home7' element={<HomePage7 />} />
+          <Route exact path='invitation' element={<InvitationPage />} />
+          <Route exact path='about' element={<AboutPage />} />
+          <Route exact path='wedding' element={<WeddingPage />} />
+          <Route exact path='wedding-details' element={<WeddingDetailsPage />} />
+          <Route exact path='gallery' element={<GalleryPage />} />
+          <Route exact path='gallery-s2' element={<GalleryPage2 />} />
+          <Route exact path='gallery-slide' element={<GallerySlide />} />
+          <Route exact path='rsvp' element={<RSVPPage />} />
+          <Route exact path='faq' element={<StoryPage />} />
+          <Route exact path='accomodation' element={<AccomodationPage />} />
+          <Route exact path='event' element={<EventPage />} />
+          <Route exact path='groom-bride' element={<BrideGroomPage />} />
+          <Route exact path='coming' element={<ComingSoonPage />} />
+          <Route exact path='404' element={<ErrorPage />} />
+          <Route exact path='blog-single/:id' element={<BlogDetails />} />
+          <Route exact path='blog-single-left-sidebar/:id' element={<BlogDetailsLeftSiide />} />
+          <Route exact path='blog-single-fullwidth/:id' element={<BlogDetailsFull />} />
+          <Route exact path='blog' element={<BlogPage />} />
+          <Route exact path='blog-left-sidebar' element={<BlogPageLeft />} />
+          <Route exact path='blog-fullwidth' element={<BlogPageFullwidth />} />
+          <Route exact path='login' element={<LoginPage />} />
+          <Route exact path='register' element={<SignUpPage />} />
+          <Route exact path='forgot-password' element={<ForgotPassword />} />
+          <Route exact path='success' element={<SuccessPage />} />
+          <Route exact path="*" element={<ErrorPage />} />
+        </Routes>
+      </HashRouter>
 
     </div>
   );
