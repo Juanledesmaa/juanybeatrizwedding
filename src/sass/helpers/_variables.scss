@@ -3,19 +3,12 @@
 ----------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap');
 
-@font-face {
-    font-family: 'Donalia';
-    src: url('../../fonts/Donalia.eot');
-    src: url('../../fonts/Donalia.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Donalia.woff2') format('woff2'),
-         url('../../fonts/Donalia.woff') format('woff'),
-         url('../../fonts/Donalia.ttf')  format('truetype'),
-}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 // fonts
 $base-font-size: 15;
 $base-font: 'Jost', sans-serif;
-$heading-font: 'Donalia';
+$heading-font: 'Great Vibes', cursive;
 
 
 // color
@@ -35,4 +28,4 @@ $text-color: #585858;
 $text-light-color: #7b7b7b;
 $heading-color: $dark-gray;
 $border-color: #ebebeb;
-$border-color-s2: #e4ebf2;
+$border-color-s2: #e4ebf2;

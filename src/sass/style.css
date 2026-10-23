@@ -54,11 +54,7 @@ Version:        1.0.0
 	Fonts
 ----------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap");
-@font-face {
-  font-family: 'Donalia';
-  src: url("../fonts/Donalia.eot");
-  src: url("../fonts/Donalia.eot?#iefix") format("embedded-opentype"), url("../fonts/Donalia.woff2") format("woff2"), url("../fonts/Donalia.woff") format("woff"), url("../fonts/Donalia.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 /* 1.1	Theme Reset Style */
 html {
@@ -97,7 +93,7 @@ h4,
 h5,
 h6 {
   color: #06002E;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-weight: 400;
 }
 
@@ -397,7 +393,7 @@ img {
   line-height: 55px;
   margin: 0;
   position: relative;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-weight: 500;
   color: #06002E;
   display: inline-block;
@@ -1042,7 +1038,7 @@ img {
   margin: 0 0 1.3em;
   position: relative;
   text-transform: capitalize;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   padding-bottom: 20px;
   font-weight: 500;
 }
@@ -1186,7 +1182,7 @@ img {
 }
 
 .blog-sidebar .about-widget a {
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-size: 14px;
   font-size: 0.93333rem;
   color: #06002E;
@@ -1764,7 +1760,7 @@ img {
 
 .wpo-site-header .navigation .navbar-header .logo {
   font-size: 45px;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   color: #eed9c4;
   margin-right: 0;
   padding-top: 0;
@@ -3528,7 +3524,7 @@ img {
 .wpo-hero-style-3 .wpo-hero-title-top span {
   font-size: 22px;
   color: #e4e4e4;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
 }
 
 @media (max-width: 767px) {
@@ -4143,7 +4139,7 @@ img {
 
 .static-hero .wpo-wedding-date #clock .time,
 .static-hero-s2 .wpo-wedding-date #clock .time {
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-size: 40px;
   line-height: 42px;
@@ -4679,7 +4675,7 @@ img {
 }
 
 .wpo-hero-style-3 .wpo-wedding-date #clock .time {
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-size: 40px;
   line-height: 42px;
@@ -5066,7 +5062,7 @@ img {
 
 .wpo-site-footer .about-widget .logo {
   font-size: 45px;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   color: #eed9c4;
 }
 
@@ -7336,7 +7332,7 @@ img {
 }
 
 .wpo-wedding-time #clock2 .time {
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-size: 60px;
   font-size: 4rem;
   line-height: 1em;
@@ -7815,7 +7811,7 @@ img {
 }
 
 .coming-soon-section .wpo-wedding-date #clock .time {
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-size: 60px;
   font-size: 4rem;
   line-height: 1em;
@@ -8010,7 +8006,7 @@ img {
   font-size: 2.26667rem;
   line-height: 1.2em;
   margin: -0.27em 0 0.7em;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-weight: 500;
 }
 
@@ -8391,7 +8387,7 @@ img {
   font-size: 2.33333rem;
   margin: -0.22em 0 0.7em;
   line-height: 1.3em;
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-weight: 500;
 }
 
@@ -8902,7 +8898,7 @@ img {
 }
 
 .wpo-blog-single-section .comments-area .comment-reply-link {
-  font-family: "Donalia";
+  font-family: "Great Vibes", cursive;
   font-size: 14px;
   font-size: 0.93333rem;
   font-weight: 600;
